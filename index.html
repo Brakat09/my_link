@@ -1,72 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Silueta Beauty | Links</title>
-    <style>
-        body {
-            background-color: #f9f9f9;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 40px 20px;
-            margin: 0;
-        }
-        .profile-pic {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%; /* لجعل الصورة دائرية */
-            border: 3px solid #F28529;
-            margin-bottom: 15px;
-        }
-        h1 {
-            font-size: 20px;
-            color: #333;
-            margin-bottom: 5px;
-        }
-        p {
-            color: #666;
-            font-size: 14px;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        .links-container {
-            width: 100%;
-            max-width: 400px;
-        }
-        .link-card {
-            background-color: #F28529; /* لونك المفضل */
-            color: white;
-            text-decoration: none;
-            display: block;
-            padding: 15px;
-            margin-bottom: 15px;
-            border-radius: 30px;
-            text-align: center;
-            font-weight: bold;
-            transition: transform 0.2s;
-        }
-        .link-card:hover {
-            transform: scale(1.03);
-            background-color: #d67421;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Silueta Beauty | Links</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Background */
+body {
+    background: url('https://foryoubeauty.net/wp-content/uploads/2025/11/Beauty-in-Pink-Gloss.png')
+        center / cover no-repeat fixed;
+}
+
+/* Soft overlay */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.22);
+    z-index: 0;
+}
+
+/* Center layout */
+.container {
+    position: relative;
+    z-index: 2;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Wrapper */
+.wrapper {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Brand */
+.brand h1 {
+    font-size: 36px; /* BIGGER LOGO */
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+    color: #000000;
+}
+
+.brand p {
+    font-size: 15px;
+    color: rgba(255,255,255,0.95);
+    margin-bottom: 32px;
+    line-height: 1.7;
+}
+
+/* Links */
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Faster floating animation */
+@keyframes float {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+}
+
+/* Button */
+.link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 20px;
+    border-radius: 16px;
+    background: rgba(255,255,255,0.78);
+    backdrop-filter: blur(10px);
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    font-size: 15px;
+    animation: float 2.2s ease-in-out infinite; /* FASTER */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Stagger animation */
+.link:nth-child(1) { animation-delay: 0s; }
+.link:nth-child(2) { animation-delay: .3s; }
+.link:nth-child(3) { animation-delay: .6s; }
+
+/* Icon */
+.link img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+/* Hover & press */
+.link:hover {
+    transform: translateY(-7px) scale(1.03);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.28);
+}
+
+.link:active {
+    transform: scale(0.95);
+}
+
+/* Footer */
+.footer {
+    margin-top: 32px;
+    font-size: 11px;
+    color: rgba(255,255,255,0.85);
+    letter-spacing: 1px;
+}
+</style>
 </head>
+
 <body>
 
-    <img src="your-logo.png" alt="Silueta Beauty" class="profile-pic">
+<div class="overlay"></div>
 
-    <h1>Silueta Beauty ✨</h1>
-    <p>Your ultimate makeup destination.<br>Quality you can feel, beauty you can see.</p>
+<div class="container">
+    <div class="wrapper">
 
-    <div class="links-container">
-        <a href="رابط_الواتساب" class="link-card">Order via WhatsApp 💬</a>
-        <a href="رابط_المتجر" class="link-card">Shop Our Collection 🛒</a>
-        <a href="رابط_انستغرام" class="link-card">Follow us on Instagram 📸</a>
-        <a href="رابط_تيك_توك" class="link-card">TikTok Trends ✨</a>
+        <div class="brand">
+            <h1>SILUETA BEAUTY</h1>
+            <p>
+                A global makeup brand proudly crafted in the USA,  
+                delivering confidence, elegance, and timeless beauty.
+            </p>
+        </div>
+
+        <div class="links">
+
+            <a href="https://www.instagram.com/Sylva_silueta" class="link">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png">
+                Instagram
+            </a>
+
+            <a href="https://wa.me/19492911725" class="link">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+                WhatsApp
+            </a>
+
+            <a href="https://foryoubeauty.net" class="link">
+                <img src="https://foryoubeauty.net/wp-content/uploads/2025/07/Untitled-3.png">
+                 Website
+            </a>
+
+        </div>
+
+        <div class="footer">
+            © 2026 Silueta Beauty. All Rights Reserved.
+        </div>
+
     </div>
+</div>
 
 </body>
 </html>
